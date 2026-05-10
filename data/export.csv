@@ -1,0 +1,123 @@
+Work packages,,,,,,,,Relations,,,,,,,,,,
+,ID,Subject,Type,Status,Assignee,Priority,Story Points,Description,,Relation type,Lag,Description,ID,Subject,Type,Status,Assignee,Probability
+,37,Showcase MVP,Milestone,New,,Very High,5,Initial functional version of the showcase with all projects integrated and a consistent structure.,,Related To,,"This risk impacts the Showcase MVP by preventing reliable reproduction of results, which undermines the functional completeness of the showcase.",43,Missing reproducibility,Risk,New,,High
+,37,Showcase MVP,Milestone,New,,Very High,5,Initial functional version of the showcase with all projects integrated and a consistent structure.,,Related To,,This risk affects the Showcase MVP by complicating integration and reducing structural coherence across projects.,44,Fragmented project structure,Risk,New,,Intermediate
+,38,Content & Interpretation,Milestone,New,,High,8,"Improve scientific depth, explanations, and narrative clarity across all showcase elements.",,Related To,,This risk directly affects the Content & Interpretation milestone by limiting the ability to convey meaningful insights from the visualizations.,41,Lack of narrative clarity,Risk,New,,High
+,39,UI/UX & Visual Polish,Milestone,New,,Intermediate,5,"Enhance usability, consistency, and responsiveness for a professional presentation.",,Related To,,This risk affects the UI/UX & Visual Polish milestone by reducing visual consistency and overall user experience quality.,42,Inconsistent UI across projects,Risk,New,,Intermediate
+,40,Freelance Ready,Milestone,New,,High,3,Prepare the showcase for professional positioning and client-facing presentation.,,Related To,,"This risk affects the Freelance Ready milestone by reducing credibility and trust, as results cannot be independently verified.",43,Missing reproducibility,Risk,New,,High
+,40,Freelance Ready,Milestone,New,,High,3,Prepare the showcase for professional positioning and client-facing presentation.,,Related To,,This risk impacts the Freelance Ready milestone by weakening the communication of skills and reducing overall project clarity for potential clients.,41,Lack of narrative clarity,Risk,New,,High
+,40,Freelance Ready,Milestone,New,,High,3,Prepare the showcase for professional positioning and client-facing presentation.,,Related To,,This risk impacts the Freelance Ready milestone by lowering perceived professionalism and presentation quality.,42,Inconsistent UI across projects,Risk,New,,Intermediate
+,45,Project Refactor & Structure,Milestone,New,,Very High,8,"Refactor the current prototype into a modular Python project with clear separation of concerns (physics model, numerical methods, visualization). Establish a maintainable architecture as the foundation for all further work.",,Related To,,Architectural decisions may not scale well later on and Breaking changes for existing outputs,51,Technical Complexity Risk,Risk,New,,High
+,45,Project Refactor & Structure,Milestone,New,,Very High,8,"Refactor the current prototype into a modular Python project with clear separation of concerns (physics model, numerical methods, visualization). Establish a maintainable architecture as the foundation for all further work.",,Related To,,Refactoring may take longer than expected and Breaking changes for existing outputs,53,Time Scope Risk,Risk,New,,High
+,46,Deterministic Plot Generation,Milestone,New,,High,5,Implement reproducible 1D and 2D plots with fixed parameter sets and stable defaults. Ensure outputs are deterministic and suitable for reuse in the showcase.,,Related To,,Inconsistent results across different systems,50,Scientific Validity Risk,Risk,New,,Intermediate
+,46,Deterministic Plot Generation,Milestone,New,,High,5,Implement reproducible 1D and 2D plots with fixed parameter sets and stable defaults. Ensure outputs are deterministic and suitable for reuse in the showcase.,,Related To,,Numerical instabilities and Parameter choices may not be robust enough,51,Technical Complexity Risk,Risk,New,,High
+,47,Animation Pipeline,Milestone,New,,Intermediate,5,"Develop a reliable animation workflow using frame generation and ffmpeg. Focus on performance, reproducibility, and clean file handling.",,Related To,,Performance issues with large frame sets and ffmpeg integration and platform dependency and High storage usage / large file sizes,51,Technical Complexity Risk,Risk,New,,High
+,47,Animation Pipeline,Milestone,New,,Intermediate,5,"Develop a reliable animation workflow using frame generation and ffmpeg. Focus on performance, reproducibility, and clean file handling.",,Related To,,Performance issues with large frame sets,53,Time Scope Risk,Risk,New,,High
+,48,Scientific Documentation,Milestone,New,,High,3,"Provide clear and structured documentation of the physical model, assumptions, and interpretation. Emphasize electron–electron interaction and correlation effects.",,Related To,,Too superficial → reduces showcase value and Inconsistency between code and documentation,50,Scientific Validity Risk,Risk,New,,Intermediate
+,48,Scientific Documentation,Milestone,New,,High,3,"Provide clear and structured documentation of the physical model, assumptions, and interpretation. Emphasize electron–electron interaction and correlation effects.",,Related To,,Too superficial → reduces showcase value and Too complex → difficult to understand and Inconsistency between code and documentation,52,Integration Risk,Risk,New,,Intermediate
+,49,Showcase Integration,Milestone,New,,High,3,"Prepare outputs (plots, animations, metadata) for seamless integration into the main showcase. Enable remote embedding and consistent presentation.",,Related To,,"Format or interface compatibility issues and Inconsistency with the rest of the showcase and Performance issues during integration (e.g., large assets)",52,Integration Risk,Risk,New,,Intermediate
+,49,Showcase Integration,Milestone,New,,High,3,"Prepare outputs (plots, animations, metadata) for seamless integration into the main showcase. Enable remote embedding and consistent presentation.",,Related To,,Format or interface compatibility issues and Inconsistency with the rest of the showcase,53,Time Scope Risk,Risk,New,,High
+,54,Data Pipeline Foundation,Milestone,New,,Very High,8,"Establish a robust data pipeline for downloading, storing, and preprocessing satellite-based sea ice concentration data. Ensure a clear separation between raw data handling, preprocessing, and downstream analysis.",,Related To,,"External satellite data sources may change format, availability, or structure, directly affecting the stability of the pipeline.",59,Data Reliability Risk,Risk,New,,Intermediate
+,54,Data Pipeline Foundation,Milestone,New,,Very High,8,"Establish a robust data pipeline for downloading, storing, and preprocessing satellite-based sea ice concentration data. Ensure a clear separation between raw data handling, preprocessing, and downstream analysis.",,Related To,,"Building a robust and modular data pipeline introduces structural complexity, especially when separating raw data handling from preprocessing.",61,Technical Complexity Risk,Risk,New,,High
+,54,Data Pipeline Foundation,Milestone,New,,Very High,8,"Establish a robust data pipeline for downloading, storing, and preprocessing satellite-based sea ice concentration data. Ensure a clear separation between raw data handling, preprocessing, and downstream analysis.",,Related To,,"Initial pipeline setup and validation may require more effort than anticipated, delaying downstream tasks.",63,Time Scope Risk,Risk,New,,High
+,55,Geospatial Processing & Region Masking,Milestone,New,,Very High,5,Implement geospatial processing logic to extract the Hudson Bay region and compute ocean-only ice coverage. Ensure correct normalization and spatial consistency across datasets.,,Related To,,"Errors in region masking, coastline handling, or coordinate transformations may lead to incorrect ice coverage calculations.",60,Geospatial Accuracy Risk,Risk,New,,High
+,55,Geospatial Processing & Region Masking,Milestone,New,,Very High,5,Implement geospatial processing logic to extract the Hudson Bay region and compute ocean-only ice coverage. Ensure correct normalization and spatial consistency across datasets.,,Related To,,Geospatial computations and transformations introduce non-trivial complexity and are often difficult to debug.,61,Technical Complexity Risk,Risk,New,,High
+,56,Time Series Generation,Milestone,New,,High,5,Compute daily and aggregated sea ice coverage metrics and generate reproducible time series datasets for downstream visualization and analysis.,,Related To,,Missing or inconsistent data points can lead to gaps or distortions in the generated time series.,59,Data Reliability Risk,Risk,New,,Intermediate
+,56,Time Series Generation,Milestone,New,,High,5,Compute daily and aggregated sea ice coverage metrics and generate reproducible time series datasets for downstream visualization and analysis.,,Related To,,Inaccuracies in region masking propagate directly into aggregated metrics and time series outputs.,60,Geospatial Accuracy Risk,Risk,New,,High
+,56,Time Series Generation,Milestone,New,,High,5,Compute daily and aggregated sea ice coverage metrics and generate reproducible time series datasets for downstream visualization and analysis.,,Related To,,Ensuring clean aggregation and reproducibility may take longer than expected.,63,Time Scope Risk,Risk,New,,High
+,57,Visualization Layer,Milestone,New,,High,5,"Create high-quality visualizations including time series plots, seasonal comparisons, and polar representations. Focus on clarity, consistency, and interpretability.",,Related To,,Generating multiple high-quality visualizations while maintaining consistency and performance increases implementation complexity.,61,Technical Complexity Risk,Risk,New,,High
+,57,Visualization Layer,Milestone,New,,High,5,"Create high-quality visualizations including time series plots, seasonal comparisons, and polar representations. Focus on clarity, consistency, and interpretability.",,Related To,,"Visual outputs may not align with the structure, style, or performance constraints of the main showcase.",62,Integration Risk,Risk,New,,Intermediate
+,58,Showcase Integration,Milestone,New,,High,3,Prepare preprocessed datasets and visualization assets for fast and reproducible integration into the showcase website. Ensure consistency with other showcase components.,,Related To,,"Differences in data formats, asset structure, or conventions may complicate seamless integration into the showcase.",62,Integration Risk,Risk,New,,Intermediate
+,58,Showcase Integration,Milestone,New,,High,3,Prepare preprocessed datasets and visualization assets for fast and reproducible integration into the showcase website. Ensure consistency with other showcase components.,,Related To,,"Final integration, including adjustments and testing, may require more time than expected.",63,Time Scope Risk,Risk,New,,High
+,64,Extensibility (Region Picker & Multi-Source Support),Milestone,New,,Intermediate,5,Design and implement a flexible system that allows arbitrary region selection and supports integration of multiple satellite datasets. Enable future extensions without major refactoring.,,Related To,,Designing a flexible and extensible system introduces additional architectural complexity early in the project.,61,Technical Complexity Risk,Risk,New,,High
+,64,Extensibility (Region Picker & Multi-Source Support),Milestone,New,,Intermediate,5,Design and implement a flexible system that allows arbitrary region selection and supports integration of multiple satellite datasets. Enable future extensions without major refactoring.,,Related To,,Supporting multiple data sources increases the likelihood of inconsistent formats and data quality issues.,59,Data Reliability Risk,Risk,New,,Intermediate
+,64,Extensibility (Region Picker & Multi-Source Support),Milestone,New,,Intermediate,5,Design and implement a flexible system that allows arbitrary region selection and supports integration of multiple satellite datasets. Enable future extensions without major refactoring.,,Related To,,Implementing extensibility features may significantly increase development time beyond initial expectations.,63,Time Scope Risk,Risk,New,,High
+,65,Data Extraction & Cleaning,Milestone,New,,High,3,"*   Parse OpenProject exports
+    
+*   Normalize structure
+    
+*   Handle relations",,Related To,,The data extraction step depends on the structure and completeness of the OpenProject export.  Changes in format or missing relations may lead to inconsistent or unusable datasets.,71,Data Consistency Risk,Risk,New,,Intermediate
+,65,Data Extraction & Cleaning,Milestone,New,,High,3,"*   Parse OpenProject exports
+    
+*   Normalize structure
+    
+*   Handle relations",,Blocks,,,66,Milestone-Risk Aggregation,Milestone,New,,High
+,66,Milestone-Risk Aggregation,Milestone,New,,High,5,"*   Group risks per milestone
+    
+*   Combine probabilities
+    
+*   Prepare structured output",,Related To,,Aggregation relies on correctly parsed relations between milestones and risks.  Inconsistent or incomplete data can lead to incorrect groupings and misleading outputs.,71,Data Consistency Risk,Risk,New,,Intermediate
+,66,Milestone-Risk Aggregation,Milestone,New,,High,5,"*   Group risks per milestone
+    
+*   Combine probabilities
+    
+*   Prepare structured output",,Related To,,"Improper aggregation logic may distort the relationship between effort and risk,  reducing the interpretability of the resulting dataset.",74,Insight Quality Risk,Risk,New,,High
+,66,Milestone-Risk Aggregation,Milestone,New,,High,5,"*   Group risks per milestone
+    
+*   Combine probabilities
+    
+*   Prepare structured output",,Blocked by,,,65,Data Extraction & Cleaning,Milestone,New,,High
+,66,Milestone-Risk Aggregation,Milestone,New,,High,5,"*   Group risks per milestone
+    
+*   Combine probabilities
+    
+*   Prepare structured output",,Blocks,,,67,Effort vs Risk Analysis,Milestone,New,,Intermediate
+,66,Milestone-Risk Aggregation,Milestone,New,,High,5,"*   Group risks per milestone
+    
+*   Combine probabilities
+    
+*   Prepare structured output",,Blocks,,,70,Network Graph (Milestones ↔ Risks),Milestone,New,,Low
+,67,Effort vs Risk Analysis,Milestone,New,,Intermediate,3,"*   Compute derived metrics
+    
+*   Identify critical clusters",,Related To,,"Derived metrics (e.g., effort vs risk) may oversimplify complex relationships  and lead to misleading conclusions if not carefully designed.",74,Insight Quality Risk,Risk,New,,High
+,67,Effort vs Risk Analysis,Milestone,New,,Intermediate,3,"*   Compute derived metrics
+    
+*   Identify critical clusters",,Related To,,There is a risk of introducing overly complex analysis logic that does not significantly  improve insight but increases implementation effort.,72,Overengineering Risk,Risk,New,,High
+,67,Effort vs Risk Analysis,Milestone,New,,Intermediate,3,"*   Compute derived metrics
+    
+*   Identify critical clusters",,Blocked by,,,66,Milestone-Risk Aggregation,Milestone,New,,High
+,67,Effort vs Risk Analysis,Milestone,New,,Intermediate,3,"*   Compute derived metrics
+    
+*   Identify critical clusters",,Blocks,,,68,Visualization Concepts,Milestone,New,,Intermediate
+,68,Visualization Concepts,Milestone,New,,Intermediate,3,"*   Define plot types
+    
+*   Mapping (axes, color, size)",,Related To,,Defining too many visualization types may lead to unnecessary complexity  and dilute the overall clarity of the showcase.,72,Overengineering Risk,Risk,New,,High
+,68,Visualization Concepts,Milestone,New,,Intermediate,3,"*   Define plot types
+    
+*   Mapping (axes, color, size)",,Related To,,Poor mapping of data to visual encodings may result in visually appealing  but analytically weak representations.,74,Insight Quality Risk,Risk,New,,High
+,68,Visualization Concepts,Milestone,New,,Intermediate,3,"*   Define plot types
+    
+*   Mapping (axes, color, size)",,Blocked by,,,67,Effort vs Risk Analysis,Milestone,New,,Intermediate
+,68,Visualization Concepts,Milestone,New,,Intermediate,3,"*   Define plot types
+    
+*   Mapping (axes, color, size)",,Blocks,,,69,D3 Integration in Showcase,Milestone,New,,High
+,69,D3 Integration in Showcase,Milestone,New,,High,5,"*   Add new section
+    
+*   Load external data
+    
+*   Ensure responsiveness",,Related To,,"Integrating D3 visualizations into the existing showcase may introduce  layout inconsistencies or performance issues, especially with larger datasets.",73,Integration Risk,Risk,New,,Intermediate
+,69,D3 Integration in Showcase,Milestone,New,,High,5,"*   Add new section
+    
+*   Load external data
+    
+*   Ensure responsiveness",,Related To,,Adding too many interactive features may complicate the implementation  without providing proportional value.,72,Overengineering Risk,Risk,New,,High
+,69,D3 Integration in Showcase,Milestone,New,,High,5,"*   Add new section
+    
+*   Load external data
+    
+*   Ensure responsiveness",,Blocked by,,,68,Visualization Concepts,Milestone,New,,Intermediate
+,70,Network Graph (Milestones ↔ Risks),Milestone,New,,Low,5,"*   Graph structure
+    
+*   Force layout
+    
+*   Interactivity",,Related To,,"Network graphs can become complex and difficult to interpret,  especially if too many nodes and edges are included.",72,Overengineering Risk,Risk,New,,High
+,70,Network Graph (Milestones ↔ Risks),Milestone,New,,Low,5,"*   Graph structure
+    
+*   Force layout
+    
+*   Interactivity",,Related To,,The visualization may fail to provide actionable insights if relationships  are not clearly structured or highlighted.,74,Insight Quality Risk,Risk,New,,High
+,70,Network Graph (Milestones ↔ Risks),Milestone,New,,Low,5,"*   Graph structure
+    
+*   Force layout
+    
+*   Interactivity",,Blocked by,,,66,Milestone-Risk Aggregation,Milestone,New,,High

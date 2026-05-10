@@ -1,0 +1,5 @@
+pandas
+openpyxl
+xlrd
+networkx   # für Dependency Graph
+matplotlib # für schnelle Debug-Plots
