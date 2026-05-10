@@ -65,67 +65,144 @@ class OpenProjectParser:
     def extract_milestones(self):
         self.logger.info("Extracting milestones")
 
-        milestones_df = self.df[self.df["wp_type"] == "Milestone"]
-        self.logger.debug(f"Found {len(milestones_df)} milestones")
+        # Get unique milestones
+        milestones_df = self.df[self.df["wp_type"] == "Milestone"].drop_duplicates(subset=["wp_id"])
+        self.logger.debug(f"Found {len(milestones_df)} unique milestones")
 
-        milestones = []
+        milestones_dict = {}
         for _, row in milestones_df.iterrows():
-            milestones.append({
-                "id": row["wp_id"],
+            milestone_id = int(row["wp_id"])
+            milestones_dict[milestone_id] = {
+                "id": milestone_id,
                 "title": row["wp_subject"],
                 "priority": row.get("wp_priority", "normal"),
-                "story_points": row.get("wp_story_points", 0),
+                "story_points": int(row.get("wp_story_points", 0)) if pd.notna(row.get("wp_story_points")) else 0,
                 "status": row.get("wp_status", ""),
-            })
+                "risks": [],
+                "blocks": [],
+                "blocked_by": [],
+            }
 
+        # Add relations
+        for _, row in self.df.iterrows():
+            source_id = int(row["wp_id"])
+            if source_id not in milestones_dict:
+                continue
+
+            rel_type = row.get("rel_type")
+            if not pd.notna(rel_type):
+                continue
+
+            # Related To relations
+            if rel_type.lower() == "related to" and pd.notna(row.get("risk_id")):
+                risk_id = int(row["risk_id"])
+                probability = row.get("risk_probability", "intermediate")
+                # Check if already in list
+                if not any(r["id"] == risk_id for r in milestones_dict[source_id]["risks"]):
+                    milestones_dict[source_id]["risks"].append({
+                        "id": risk_id,
+                        "probability": probability
+                    })
+
+            # Blocks relation
+            elif rel_type.lower() == "blocks" and pd.notna(row.get("risk_id")):
+                target_id = int(row["risk_id"])
+                if target_id not in milestones_dict[source_id]["blocks"]:
+                    milestones_dict[source_id]["blocks"].append(target_id)
+
+            # Blocked by relation
+            elif rel_type.lower() == "blocked by" and pd.notna(row.get("risk_id")):
+                target_id = int(row["risk_id"])
+                if target_id not in milestones_dict[source_id]["blocked_by"]:
+                    milestones_dict[source_id]["blocked_by"].append(target_id)
+
+        milestones = list(milestones_dict.values())
+        self.logger.debug(f"Extracted {len(milestones)} milestones with relations")
         return milestones
 
     def extract_risks(self):
         self.logger.info("Extracting risks")
 
-        risks_df = self.df[self.df["risk_type"] == "Risk"]
-        self.logger.debug(f"Found {len(risks_df)} risks")
+        # Get unique risks
+        risks_df = self.df[self.df["risk_type"] == "Risk"].drop_duplicates(subset=["risk_id"])
+        self.logger.debug(f"Found {len(risks_df)} unique risks")
 
-        risks = []
+        risks_dict = {}
         for _, row in risks_df.iterrows():
-            risks.append({
-                "id": row["risk_id"],
+            risk_id = int(row["risk_id"])
+            risks_dict[risk_id] = {
+                "id": risk_id,
                 "title": row["risk_subject"],
-                "priority": row.get("risk_type", "normal"),
                 "probability": row.get("risk_probability", "intermediate"),
                 "status": row.get("risk_status", ""),
-            })
+                "milestones": [],
+            }
 
+        # Add milestone references
+        for _, row in self.df.iterrows():
+            rel_type = row.get("rel_type")
+            if pd.notna(rel_type) and rel_type.lower() == "related to":
+                if pd.notna(row.get("risk_id")):
+                    risk_id = int(row["risk_id"])
+                    if risk_id in risks_dict:
+                        milestone_id = int(row["wp_id"])
+                        milestone_priority = row.get("wp_priority", "normal")
+                        milestone_story_points = int(row.get("wp_story_points", 0)) if pd.notna(row.get("wp_story_points")) else 0
+                        # Check if already in list
+                        if not any(m["id"] == milestone_id for m in risks_dict[risk_id]["milestones"]):
+                            risks_dict[risk_id]["milestones"].append({
+                                "id": milestone_id,
+                                "story_points": milestone_story_points,
+                                "priority": milestone_priority
+                            })
+
+        risks = list(risks_dict.values())
+        self.logger.debug(f"Extracted {len(risks)} risks with milestone references")
         return risks
 
     def extract_relations(self):
         self.logger.info("Extracting relations")
 
-        relations = []
+        blocks_relations = []
+        blocked_by_relations = []
 
+        seen = set()
         for _, row in self.df.iterrows():
-            source_id = row["wp_id"]
-
             rel_type = row.get("rel_type")
-            if pd.notna(rel_type) and pd.notna(row.get("risk_id")):
-                # Normalize relation type
-                if rel_type.lower() == "related to":
-                    relation_type = "related_to"
-                elif rel_type.lower() == "blocks":
-                    relation_type = "blocks"
-                elif rel_type.lower() == "blocked by":
-                    relation_type = "blocked_by"
-                else:
-                    continue  # Skip unknown types
+            if not pd.notna(rel_type):
+                continue
 
-                relations.append({
-                    "from_id": source_id,
-                    "to_id": int(row["risk_id"]),
-                    "type": relation_type
-                })
+            source_id = int(row["wp_id"])
+            target_id = row.get("risk_id")
+            if not pd.notna(target_id):
+                continue
 
-        self.logger.debug(f"Extracted {len(relations)} relations")
+            target_id = int(target_id)
 
+            if rel_type.lower() == "blocks":
+                relation_key = (source_id, target_id, "blocks")
+                if relation_key not in seen:
+                    blocks_relations.append({
+                        "from_id": source_id,
+                        "to_id": target_id
+                    })
+                    seen.add(relation_key)
+
+            elif rel_type.lower() == "blocked by":
+                relation_key = (source_id, target_id, "blocked_by")
+                if relation_key not in seen:
+                    blocked_by_relations.append({
+                        "from_id": source_id,
+                        "to_id": target_id
+                    })
+                    seen.add(relation_key)
+
+        relations = {
+            "blocks": blocks_relations,
+            "blocked_by": blocked_by_relations,
+        }
+
+        self.logger.debug(f"Extracted {len(blocks_relations)} blocks and {len(blocked_by_relations)} blocked_by relations")
         return relations
 
     # ----------------------------------
