@@ -1,11 +1,10 @@
 import pandas as pd
-from logger import setup_logger
-
+import logging
 
 class OpenProjectParser:
     def __init__(self, file_path: str, debug: bool = True):
         self.file_path = file_path
-        self.logger = setup_logger(debug=debug)
+        self.logger = logging.getLogger("openproject_parser")
         self.df = None
 
     def load(self):

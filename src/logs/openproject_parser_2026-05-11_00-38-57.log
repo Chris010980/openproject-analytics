@@ -1,0 +1,23 @@
+2026-05-11 00:38:57,267 | DEBUG    | openproject_parser | Logger initialized. Log file: logs/openproject_parser_2026-05-11_00-38-57.log
+2026-05-11 00:38:57,267 | INFO     | openproject_parser | Starting parsing process
+2026-05-11 00:38:57,267 | INFO     | openproject_parser | Loading file: data/export.xlsx
+2026-05-11 00:38:57,533 | ERROR    | openproject_parser | Failed to load XLS file
+Traceback (most recent call last):
+  File "/home/christian/Projekte/HTML/GithubPages/Python_Projects/openproject-analytics/src/parser.py", line 14, in load
+    self.df = pd.read_excel(self.file_path, engine="openpyxl", header=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/christian/Dresden/Programme/anaconda3/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 495, in read_excel
+    io = ExcelFile(
+         ^^^^^^^^^^
+  File "/home/christian/Dresden/Programme/anaconda3/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 1567, in __init__
+    self._reader = self._engines[engine](
+                   ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/christian/Dresden/Programme/anaconda3/lib/python3.12/site-packages/pandas/io/excel/_openpyxl.py", line 553, in __init__
+    super().__init__(
+  File "/home/christian/Dresden/Programme/anaconda3/lib/python3.12/site-packages/pandas/io/excel/_base.py", line 563, in __init__
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/christian/Dresden/Programme/anaconda3/lib/python3.12/site-packages/pandas/io/common.py", line 882, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'data/export.xlsx'
