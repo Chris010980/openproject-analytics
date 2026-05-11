@@ -10,6 +10,8 @@ PROBABILITY_WEIGHTS = {
     "Very High": 5
 }
 
+MAX_RISK_WEIGHT = max(PROBABILITY_WEIGHTS.values())
+
 
 def compute_milestone_metrics(data):
     results = []
@@ -19,7 +21,7 @@ def compute_milestone_metrics(data):
         title = m["title"]
         story_points = m.get("story_points", 0)
 
-        # --- Risk Exposure ---
+        # --- Risk weights sammeln ---
         risk_weights = []
         for r in m.get("risks", []):
             prob = r.get("probability", "Low")
@@ -29,8 +31,14 @@ def compute_milestone_metrics(data):
         risk_exposure = sum(risk_weights)
         risk_count = len(risk_weights)
 
-        # --- Combined Score (einfacher Ansatz) ---
-        # Idee: Aufwand * Risiko
+        # --- Neue Metriken ---
+        max_possible = risk_count * MAX_RISK_WEIGHT if risk_count > 0 else 1
+
+        normalized_risk = risk_exposure / max_possible
+        avg_risk = risk_exposure / risk_count if risk_count > 0 else 0
+        risk_density = risk_exposure / story_points if story_points > 0 else 0
+
+        # --- Combined Score ---
         combined_score = story_points * risk_exposure
 
         result = {
@@ -39,6 +47,9 @@ def compute_milestone_metrics(data):
             "story_points": story_points,
             "risk_exposure": risk_exposure,
             "risk_count": risk_count,
+            "normalized_risk": round(normalized_risk, 3),
+            "avg_risk": round(avg_risk, 3),
+            "risk_density": round(risk_density, 3),
             "combined_score": combined_score
         }
 
