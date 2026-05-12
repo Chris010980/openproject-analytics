@@ -40,6 +40,7 @@ def compute_milestone_metrics(data):
 
         # --- Combined Score ---
         combined_score = story_points * risk_exposure
+        priority_score = risk_density * story_points
 
         result = {
             "id": mid,
@@ -50,10 +51,12 @@ def compute_milestone_metrics(data):
             "normalized_risk": round(normalized_risk, 3),
             "avg_risk": round(avg_risk, 3),
             "risk_density": round(risk_density, 3),
-            "combined_score": combined_score
+            "combined_score": combined_score,
+            "priority_score": round(priority_score, 3)
         }
 
         logger.debug(f"Milestone {mid}: {result}")
         results.append(result)
+        results = sorted(results, key=lambda x: x["combined_score"], reverse=True)
 
     return results
