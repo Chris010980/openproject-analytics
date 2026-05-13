@@ -16,10 +16,6 @@ env/
 data/*.xls
 data/*.xlsx
 
-# Output files
-output/*
-!output/.gitkeep
-
 # Logs
 logs/*
 !logs/.gitkeep

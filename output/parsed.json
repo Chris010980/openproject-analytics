@@ -1,0 +1,825 @@
+{
+  "milestones": [
+    {
+      "id": 37,
+      "title": "Showcase MVP",
+      "priority": "Very High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 43,
+          "probability": "High"
+        },
+        {
+          "id": 44,
+          "probability": "Intermediate"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 38,
+      "title": "Content & Interpretation",
+      "priority": "High",
+      "story_points": 8,
+      "status": "New",
+      "risks": [
+        {
+          "id": 41,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 39,
+      "title": "UI/UX & Visual Polish",
+      "priority": "Intermediate",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 42,
+          "probability": "Intermediate"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 40,
+      "title": "Freelance Ready",
+      "priority": "High",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 43,
+          "probability": "High"
+        },
+        {
+          "id": 41,
+          "probability": "High"
+        },
+        {
+          "id": 42,
+          "probability": "Intermediate"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 45,
+      "title": "Project Refactor & Structure",
+      "priority": "Very High",
+      "story_points": 8,
+      "status": "New",
+      "risks": [
+        {
+          "id": 51,
+          "probability": "High"
+        },
+        {
+          "id": 53,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 46,
+      "title": "Deterministic Plot Generation",
+      "priority": "High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 50,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 51,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 47,
+      "title": "Animation Pipeline",
+      "priority": "Intermediate",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 51,
+          "probability": "High"
+        },
+        {
+          "id": 53,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 48,
+      "title": "Scientific Documentation",
+      "priority": "High",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 50,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 52,
+          "probability": "Intermediate"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 49,
+      "title": "Showcase Integration",
+      "priority": "High",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 52,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 53,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 54,
+      "title": "Data Pipeline Foundation",
+      "priority": "Very High",
+      "story_points": 8,
+      "status": "New",
+      "risks": [
+        {
+          "id": 59,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 61,
+          "probability": "High"
+        },
+        {
+          "id": 63,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 55,
+      "title": "Geospatial Processing & Region Masking",
+      "priority": "Very High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 60,
+          "probability": "High"
+        },
+        {
+          "id": 61,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 56,
+      "title": "Time Series Generation",
+      "priority": "High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 59,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 60,
+          "probability": "High"
+        },
+        {
+          "id": 63,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 57,
+      "title": "Visualization Layer",
+      "priority": "High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 61,
+          "probability": "High"
+        },
+        {
+          "id": 62,
+          "probability": "Intermediate"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 58,
+      "title": "Showcase Integration",
+      "priority": "High",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 62,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 63,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 64,
+      "title": "Extensibility (Region Picker & Multi-Source Support)",
+      "priority": "Intermediate",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 61,
+          "probability": "High"
+        },
+        {
+          "id": 59,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 63,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": []
+    },
+    {
+      "id": 65,
+      "title": "Data Extraction & Cleaning",
+      "priority": "High",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 71,
+          "probability": "Intermediate"
+        }
+      ],
+      "blocks": [
+        66
+      ],
+      "blocked_by": []
+    },
+    {
+      "id": 66,
+      "title": "Milestone-Risk Aggregation",
+      "priority": "High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 71,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 74,
+          "probability": "High"
+        }
+      ],
+      "blocks": [
+        67,
+        70
+      ],
+      "blocked_by": [
+        65
+      ]
+    },
+    {
+      "id": 67,
+      "title": "Effort vs Risk Analysis",
+      "priority": "Intermediate",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 74,
+          "probability": "High"
+        },
+        {
+          "id": 72,
+          "probability": "High"
+        }
+      ],
+      "blocks": [
+        68
+      ],
+      "blocked_by": [
+        66
+      ]
+    },
+    {
+      "id": 68,
+      "title": "Visualization Concepts",
+      "priority": "Intermediate",
+      "story_points": 3,
+      "status": "New",
+      "risks": [
+        {
+          "id": 72,
+          "probability": "High"
+        },
+        {
+          "id": 74,
+          "probability": "High"
+        }
+      ],
+      "blocks": [
+        69
+      ],
+      "blocked_by": [
+        67
+      ]
+    },
+    {
+      "id": 69,
+      "title": "D3 Integration in Showcase",
+      "priority": "High",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 73,
+          "probability": "Intermediate"
+        },
+        {
+          "id": 72,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": [
+        68
+      ]
+    },
+    {
+      "id": 70,
+      "title": "Network Graph (Milestones \u2194 Risks)",
+      "priority": "Low",
+      "story_points": 5,
+      "status": "New",
+      "risks": [
+        {
+          "id": 72,
+          "probability": "High"
+        },
+        {
+          "id": 74,
+          "probability": "High"
+        }
+      ],
+      "blocks": [],
+      "blocked_by": [
+        66
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "id": 43,
+      "title": "Missing reproducibility",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 37,
+          "story_points": 5,
+          "priority": "Very High"
+        },
+        {
+          "id": 40,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "title": "Fragmented project structure",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 37,
+          "story_points": 5,
+          "priority": "Very High"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "title": "Lack of narrative clarity",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 38,
+          "story_points": 8,
+          "priority": "High"
+        },
+        {
+          "id": 40,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title": "Inconsistent UI across projects",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 39,
+          "story_points": 5,
+          "priority": "Intermediate"
+        },
+        {
+          "id": 40,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "title": "Technical Complexity Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 45,
+          "story_points": 8,
+          "priority": "Very High"
+        },
+        {
+          "id": 46,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 47,
+          "story_points": 5,
+          "priority": "Intermediate"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "title": "Time Scope Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 45,
+          "story_points": 8,
+          "priority": "Very High"
+        },
+        {
+          "id": 47,
+          "story_points": 5,
+          "priority": "Intermediate"
+        },
+        {
+          "id": 49,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "title": "Scientific Validity Risk",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 46,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 48,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "title": "Integration Risk",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 48,
+          "story_points": 3,
+          "priority": "High"
+        },
+        {
+          "id": 49,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "title": "Data Reliability Risk",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 54,
+          "story_points": 8,
+          "priority": "Very High"
+        },
+        {
+          "id": 56,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 64,
+          "story_points": 5,
+          "priority": "Intermediate"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "title": "Technical Complexity Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 54,
+          "story_points": 8,
+          "priority": "Very High"
+        },
+        {
+          "id": 55,
+          "story_points": 5,
+          "priority": "Very High"
+        },
+        {
+          "id": 57,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 64,
+          "story_points": 5,
+          "priority": "Intermediate"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "title": "Time Scope Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 54,
+          "story_points": 8,
+          "priority": "Very High"
+        },
+        {
+          "id": 56,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 58,
+          "story_points": 3,
+          "priority": "High"
+        },
+        {
+          "id": 64,
+          "story_points": 5,
+          "priority": "Intermediate"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "title": "Geospatial Accuracy Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 55,
+          "story_points": 5,
+          "priority": "Very High"
+        },
+        {
+          "id": 56,
+          "story_points": 5,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "title": "Integration Risk",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 57,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 58,
+          "story_points": 3,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "title": "Data Consistency Risk",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 65,
+          "story_points": 3,
+          "priority": "High"
+        },
+        {
+          "id": 66,
+          "story_points": 5,
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "title": "Insight Quality Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 66,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 67,
+          "story_points": 3,
+          "priority": "Intermediate"
+        },
+        {
+          "id": 68,
+          "story_points": 3,
+          "priority": "Intermediate"
+        },
+        {
+          "id": 70,
+          "story_points": 5,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "title": "Overengineering Risk",
+      "probability": "High",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 67,
+          "story_points": 3,
+          "priority": "Intermediate"
+        },
+        {
+          "id": 68,
+          "story_points": 3,
+          "priority": "Intermediate"
+        },
+        {
+          "id": 69,
+          "story_points": 5,
+          "priority": "High"
+        },
+        {
+          "id": 70,
+          "story_points": 5,
+          "priority": "Low"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "title": "Integration Risk",
+      "probability": "Intermediate",
+      "status": "New",
+      "milestones": [
+        {
+          "id": 69,
+          "story_points": 5,
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "relations": {
+    "blocks": [
+      {
+        "from_id": 65,
+        "to_id": 66
+      },
+      {
+        "from_id": 66,
+        "to_id": 67
+      },
+      {
+        "from_id": 66,
+        "to_id": 70
+      },
+      {
+        "from_id": 67,
+        "to_id": 68
+      },
+      {
+        "from_id": 68,
+        "to_id": 69
+      }
+    ],
+    "blocked_by": [
+      {
+        "from_id": 66,
+        "to_id": 65
+      },
+      {
+        "from_id": 67,
+        "to_id": 66
+      },
+      {
+        "from_id": 68,
+        "to_id": 67
+      },
+      {
+        "from_id": 69,
+        "to_id": 68
+      },
+      {
+        "from_id": 70,
+        "to_id": 66
+      }
+    ]
+  }
+}

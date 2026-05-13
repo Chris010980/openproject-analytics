@@ -1,0 +1,436 @@
+{
+  "nodes": [
+    {
+      "id": 37,
+      "type": "milestone",
+      "label": "Showcase MVP"
+    },
+    {
+      "id": 38,
+      "type": "milestone",
+      "label": "Content & Interpretation"
+    },
+    {
+      "id": 39,
+      "type": "milestone",
+      "label": "UI/UX & Visual Polish"
+    },
+    {
+      "id": 40,
+      "type": "milestone",
+      "label": "Freelance Ready"
+    },
+    {
+      "id": 45,
+      "type": "milestone",
+      "label": "Project Refactor & Structure"
+    },
+    {
+      "id": 46,
+      "type": "milestone",
+      "label": "Deterministic Plot Generation"
+    },
+    {
+      "id": 47,
+      "type": "milestone",
+      "label": "Animation Pipeline"
+    },
+    {
+      "id": 48,
+      "type": "milestone",
+      "label": "Scientific Documentation"
+    },
+    {
+      "id": 49,
+      "type": "milestone",
+      "label": "Showcase Integration"
+    },
+    {
+      "id": 54,
+      "type": "milestone",
+      "label": "Data Pipeline Foundation"
+    },
+    {
+      "id": 55,
+      "type": "milestone",
+      "label": "Geospatial Processing & Region Masking"
+    },
+    {
+      "id": 56,
+      "type": "milestone",
+      "label": "Time Series Generation"
+    },
+    {
+      "id": 57,
+      "type": "milestone",
+      "label": "Visualization Layer"
+    },
+    {
+      "id": 58,
+      "type": "milestone",
+      "label": "Showcase Integration"
+    },
+    {
+      "id": 64,
+      "type": "milestone",
+      "label": "Extensibility (Region Picker & Multi-Source Support)"
+    },
+    {
+      "id": 65,
+      "type": "milestone",
+      "label": "Data Extraction & Cleaning"
+    },
+    {
+      "id": 66,
+      "type": "milestone",
+      "label": "Milestone-Risk Aggregation"
+    },
+    {
+      "id": 67,
+      "type": "milestone",
+      "label": "Effort vs Risk Analysis"
+    },
+    {
+      "id": 68,
+      "type": "milestone",
+      "label": "Visualization Concepts"
+    },
+    {
+      "id": 69,
+      "type": "milestone",
+      "label": "D3 Integration in Showcase"
+    },
+    {
+      "id": 70,
+      "type": "milestone",
+      "label": "Network Graph (Milestones \u2194 Risks)"
+    },
+    {
+      "id": 43,
+      "type": "risk",
+      "label": "Missing reproducibility"
+    },
+    {
+      "id": 44,
+      "type": "risk",
+      "label": "Fragmented project structure"
+    },
+    {
+      "id": 41,
+      "type": "risk",
+      "label": "Lack of narrative clarity"
+    },
+    {
+      "id": 42,
+      "type": "risk",
+      "label": "Inconsistent UI across projects"
+    },
+    {
+      "id": 51,
+      "type": "risk",
+      "label": "Technical Complexity Risk"
+    },
+    {
+      "id": 53,
+      "type": "risk",
+      "label": "Time Scope Risk"
+    },
+    {
+      "id": 50,
+      "type": "risk",
+      "label": "Scientific Validity Risk"
+    },
+    {
+      "id": 52,
+      "type": "risk",
+      "label": "Integration Risk"
+    },
+    {
+      "id": 59,
+      "type": "risk",
+      "label": "Data Reliability Risk"
+    },
+    {
+      "id": 61,
+      "type": "risk",
+      "label": "Technical Complexity Risk"
+    },
+    {
+      "id": 63,
+      "type": "risk",
+      "label": "Time Scope Risk"
+    },
+    {
+      "id": 60,
+      "type": "risk",
+      "label": "Geospatial Accuracy Risk"
+    },
+    {
+      "id": 62,
+      "type": "risk",
+      "label": "Integration Risk"
+    },
+    {
+      "id": 71,
+      "type": "risk",
+      "label": "Data Consistency Risk"
+    },
+    {
+      "id": 74,
+      "type": "risk",
+      "label": "Insight Quality Risk"
+    },
+    {
+      "id": 72,
+      "type": "risk",
+      "label": "Overengineering Risk"
+    },
+    {
+      "id": 73,
+      "type": "risk",
+      "label": "Integration Risk"
+    }
+  ],
+  "links": [
+    {
+      "source": 37,
+      "target": 43,
+      "type": "risk"
+    },
+    {
+      "source": 37,
+      "target": 44,
+      "type": "risk"
+    },
+    {
+      "source": 38,
+      "target": 41,
+      "type": "risk"
+    },
+    {
+      "source": 39,
+      "target": 42,
+      "type": "risk"
+    },
+    {
+      "source": 40,
+      "target": 43,
+      "type": "risk"
+    },
+    {
+      "source": 40,
+      "target": 41,
+      "type": "risk"
+    },
+    {
+      "source": 40,
+      "target": 42,
+      "type": "risk"
+    },
+    {
+      "source": 45,
+      "target": 51,
+      "type": "risk"
+    },
+    {
+      "source": 45,
+      "target": 53,
+      "type": "risk"
+    },
+    {
+      "source": 46,
+      "target": 50,
+      "type": "risk"
+    },
+    {
+      "source": 46,
+      "target": 51,
+      "type": "risk"
+    },
+    {
+      "source": 47,
+      "target": 51,
+      "type": "risk"
+    },
+    {
+      "source": 47,
+      "target": 53,
+      "type": "risk"
+    },
+    {
+      "source": 48,
+      "target": 50,
+      "type": "risk"
+    },
+    {
+      "source": 48,
+      "target": 52,
+      "type": "risk"
+    },
+    {
+      "source": 49,
+      "target": 52,
+      "type": "risk"
+    },
+    {
+      "source": 49,
+      "target": 53,
+      "type": "risk"
+    },
+    {
+      "source": 54,
+      "target": 59,
+      "type": "risk"
+    },
+    {
+      "source": 54,
+      "target": 61,
+      "type": "risk"
+    },
+    {
+      "source": 54,
+      "target": 63,
+      "type": "risk"
+    },
+    {
+      "source": 55,
+      "target": 60,
+      "type": "risk"
+    },
+    {
+      "source": 55,
+      "target": 61,
+      "type": "risk"
+    },
+    {
+      "source": 56,
+      "target": 59,
+      "type": "risk"
+    },
+    {
+      "source": 56,
+      "target": 60,
+      "type": "risk"
+    },
+    {
+      "source": 56,
+      "target": 63,
+      "type": "risk"
+    },
+    {
+      "source": 57,
+      "target": 61,
+      "type": "risk"
+    },
+    {
+      "source": 57,
+      "target": 62,
+      "type": "risk"
+    },
+    {
+      "source": 58,
+      "target": 62,
+      "type": "risk"
+    },
+    {
+      "source": 58,
+      "target": 63,
+      "type": "risk"
+    },
+    {
+      "source": 64,
+      "target": 61,
+      "type": "risk"
+    },
+    {
+      "source": 64,
+      "target": 59,
+      "type": "risk"
+    },
+    {
+      "source": 64,
+      "target": 63,
+      "type": "risk"
+    },
+    {
+      "source": 65,
+      "target": 71,
+      "type": "risk"
+    },
+    {
+      "source": 66,
+      "target": 71,
+      "type": "risk"
+    },
+    {
+      "source": 66,
+      "target": 74,
+      "type": "risk"
+    },
+    {
+      "source": 67,
+      "target": 74,
+      "type": "risk"
+    },
+    {
+      "source": 67,
+      "target": 72,
+      "type": "risk"
+    },
+    {
+      "source": 68,
+      "target": 72,
+      "type": "risk"
+    },
+    {
+      "source": 68,
+      "target": 74,
+      "type": "risk"
+    },
+    {
+      "source": 69,
+      "target": 73,
+      "type": "risk"
+    },
+    {
+      "source": 69,
+      "target": 72,
+      "type": "risk"
+    },
+    {
+      "source": 70,
+      "target": 72,
+      "type": "risk"
+    },
+    {
+      "source": 70,
+      "target": 74,
+      "type": "risk"
+    },
+    {
+      "source": 65,
+      "target": 66,
+      "type": "blocks"
+    },
+    {
+      "source": 66,
+      "target": 67,
+      "type": "blocks"
+    },
+    {
+      "source": 66,
+      "target": 70,
+      "type": "blocks"
+    },
+    {
+      "source": 67,
+      "target": 68,
+      "type": "blocks"
+    },
+    {
+      "source": 68,
+      "target": 69,
+      "type": "blocks"
+    }
+  ]
+}
