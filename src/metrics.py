@@ -10,6 +10,14 @@ PROBABILITY_WEIGHTS = {
     "Very High": 5
 }
 
+PRIORITY_WEIGHTS = {
+    "Very Low": 0,
+    "Low": 1,
+    "Intermediate": 2,
+    "High": 3,
+    "Very High": 4
+}
+
 MAX_RISK_WEIGHT = max(PROBABILITY_WEIGHTS.values())
 
 
@@ -41,6 +49,8 @@ def compute_milestone_metrics(data):
         # --- Combined Score ---
         combined_score = story_points * risk_exposure
         priority_score = risk_density * story_points
+        milestone_priority = m.get("priority", "Low")
+        priority = PRIORITY_WEIGHTS.get(milestone_priority, 0)
 
         result = {
             "id": mid,
@@ -52,7 +62,8 @@ def compute_milestone_metrics(data):
             "avg_risk": round(avg_risk, 3),
             "risk_density": round(risk_density, 3),
             "combined_score": combined_score,
-            "priority_score": round(priority_score, 3)
+            "priority_score": round(priority_score, 3),
+            "priority": priority
         }
 
         logger.debug(f"Milestone {mid}: {result}")
